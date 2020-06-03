@@ -1,0 +1,107 @@
+body{
+  margin:0;
+  padding: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  font-family: 'Ubuntu Mono', monospace;
+}
+.container{
+  position:relative;
+  width: 900px;
+  min-height: 500px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,1);
+
+}
+ .container:before{
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  width:50%;
+  height:100%;
+  pointer-events: none;
+  background:rgba(255,255,255,0.1);
+}
+.form{
+  position:absolute;
+  top:100px;
+  width:100%;
+  height:100%;
+  padding:40px;
+  box-sizing: border-box;
+  z-index:1;
+}
+.form h2{
+  margin:0;
+  padding:0;
+  color:#fff;
+  font-size:24px;
+}
+ .form .inputBox{
+  width:100%;
+  margin-top:20px;
+}
+ .form .inputBox input{
+  width:100%;
+  background: transparent;
+  border:none;
+  border-bottom:2px solid #fff;
+  outline:none;
+  color:#fff;
+  font-size: 18px;
+  padding:5px 0;
+  font-family: 'Ubuntu Mono', monospace;
+}
+  ::placeholder{
+color:#eee;
+ }
+.form .inputBox input[type="submit"]{
+  background: #fff;
+  color:#000;
+  border:none;
+  font-weight: 900;
+  max-width: 100px;
+  cursor:pointer;
+}
+ .form p{
+  color:#eee;
+}
+.form p a{
+  color:#fff;
+}
+ .container:after{
+  content:"";
+  position: absolute;
+  top:-10px;
+  left:-10px;
+  right:-10px;
+  bottom:-10px;
+  pointer-events: none;
+  background:linear-gradient(45deg,#0c9299,#8a00b8);
+  animation: animate 10s linear infinite;
+}
+h1{
+  font-family:'Ubuntu',Monospace;
+  position: absolute;
+  top:0;
+  font-size: 50px;
+  color:white;
+  text-align: center;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    filter:blur(60px) hue-rotate(0deg);
+  }
+
+  100%
+  {
+    filter:blur(60px) hue-rotate(360deg);
+   }
+}
